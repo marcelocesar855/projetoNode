@@ -1,0 +1,3 @@
+COMANDOS PARA INICIALIZAR O SISTEMA PELO GIT BASH
+inicializar backend -> yarn starts
+inicializar frontend -> yarn start
