@@ -1,0 +1,20 @@
+{
+  "name": "controleclientes",
+  "version": "1.0",
+  "description": "Projeto Node.js de controle de clientes para uma locadora",
+  "main": "index.js",
+  "author": "Marcelo Cesar & Carlos Deivide",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.22",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "scripts": {
+    "starts": "nodemon src/index.js"
+  }
+}

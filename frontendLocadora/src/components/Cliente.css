@@ -1,0 +1,20 @@
+.cliente-listar button {
+    border: 0;
+    background: transparent;
+    color: #0f97f1;
+    cursor: pointer;
+  }
+  
+  .cliente-listar button:hover {
+    opacity: 0.7;
+  }
+
+  .cliente-listar {
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+
+  .cliente-listar textarea {
+      width: 200px;
+      height: 50px;
+  }
