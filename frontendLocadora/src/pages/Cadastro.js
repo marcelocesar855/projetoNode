@@ -14,6 +14,33 @@ export default class Cadastro extends Component {
         cep : null,
         filmes :null
     };
+
+    handleInputChangeNome = e => { //possibilita a edição do texto no input
+        this.setState({nome : e.target.value});
+    }
+    handleInputChangeCpf = e => {  //possibilita a edição do texto no input
+        this.setState({cpf : e.target.value});
+    };
+
+    handleInputChangeTelefone = e => {  //possibilita a edição do texto no input
+        this.setState({telefone : e.target.value});
+    };
+
+    handleInputChangeEmail = e => {  //possibilita a edição do texto no input
+        this.setState({email : e.target.value});
+    };
+
+    handleInputChangeEndereco = e => {  //possibilita a edição do texto no input
+        this.setState({endereco : e.target.value});
+    };
+
+    handleInputChangeCep = e => {  //possibilita a edição do texto no input
+        this.setState({cep : e.target.value});
+    };
+    
+    handleInputChange = e => {  //possibilita a edição do texto no input
+        this.setState({filmes : e.target.value});
+    };
     
     handleInclude = async () => { //envia as informações a serem salvar para o backend
         const nome = this.state.nome;
@@ -62,12 +89,18 @@ export default class Cadastro extends Component {
                 </ul>
                 <h1>Cadastro</h1>
                 <li className="cliente">
-                    <p>Nome:&nbsp;<input type="text" value={this.state.nome}></input></p>
-                    <p>CPF:&nbsp;<input type="number" value={this.state.cpf}></input></p>
-                    <p>Telefone:&nbsp;<input type="number" value={this.state.telefone}></input></p>
-                    <p>Email:&nbsp;<input type="email" value={this.state.email}></input></p>
-                    <p>Endereço:&nbsp;<input type="text" value={this.state.endereco}></input></p>
-                    <p>CEP:&nbsp;<input type="number" value={this.state.cep}></input></p>
+                    <p>Nome:&nbsp;<input type="text" value={this.state.nome}
+                    onChange={this.handleInputChangeNome}></input></p>
+                    <p>CPF:&nbsp;<input type="number" value={this.state.cpf}
+                    onChange={this.handleInputChangeCpf}></input></p>
+                    <p>Telefone:&nbsp;<input type="number" value={this.state.telefone}
+                    onChange={this.handleInputChangeTelefone}></input></p>
+                    <p>Email:&nbsp;<input type="email" value={this.state.email}
+                    onChange={this.handleInputChangeEmail}></input></p>
+                    <p>Endereço:&nbsp;<input type="text" value={this.state.endereco}
+                    onChange={this.handleInputChangeEndereco}></input></p>
+                    <p>CEP:&nbsp;<input type="number" value={this.state.cep}
+                    onChange={this.handleInputChangeCep}></input></p>
                     <p>Filmes<br/><textarea onChange={this.handleInputChange} value={this.state.filmes}></textarea></p>
                     <p><button type="button" onClick={this.handleInclude}
                     alt="Cadastro do Cliente">Cadastrar Cliente</button></p>
